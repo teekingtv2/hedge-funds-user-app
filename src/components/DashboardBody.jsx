@@ -48,7 +48,7 @@ const DashboardBody = ({ userData, transData, walletData }) => {
           />
           <div className="">
             <div className="dashCardTitle">{formatter.format(userData.profit_balance)}</div>
-            <div className="text-[14px] md:text-[15px]">Trading Balance</div>
+            <div className="text-[14px] md:text-[15px]">Total Profits</div>
             <div className="text-[11px] text-[#b99dfa]">Total Profit Made</div>
           </div>
         </div>
