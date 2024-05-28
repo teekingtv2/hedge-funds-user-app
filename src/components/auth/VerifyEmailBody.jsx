@@ -5,7 +5,6 @@ import { validateOtp } from '../../utils/validate';
 import { otpValues } from '../../utils/initialValues';
 import SubmitButton from '../forms/SubmitButton';
 import { useLocation, useNavigate } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
 import { errorNotification, successNotification } from '../../utils/helpers';
 import axios from 'axios';
 
@@ -103,7 +102,7 @@ const VerifyEmailBody = () => {
               <SubmitButton title="Password Reset" className="mt-10 w-[100%]" />
               <div className="text-[14px] md:text-[16px] text-center mt-[20px] flex justify-center gap-2">
                 Didn't recive the OTP?
-                <div onClick={resendOTP} className="text-[#ffe6a6]">
+                <div onClick={resendOTP} className="text-[#b99dfa]">
                   Resend OTP
                 </div>
               </div>

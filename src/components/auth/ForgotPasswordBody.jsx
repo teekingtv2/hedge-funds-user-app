@@ -5,8 +5,6 @@ import { validateForgotPassword } from '../../utils/validate';
 import { forgotPasswordValues } from '../../utils/initialValues';
 import SubmitButton from '../forms/SubmitButton';
 import { Link } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { errorNotification, successNotification } from '../../utils/helpers';
 import axios from 'axios';
 
@@ -34,18 +32,6 @@ const ForgotPasswordBody = () => {
 
   return (
     <>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
       <div className="w-[100%] mx-auto">
         <div className="px-2 md:px-10 bg-[#111111da] overflow-x-scroll pt-[50px] pb-[50px] register-box">
           <div className="px-3">
@@ -68,7 +54,7 @@ const ForgotPasswordBody = () => {
               <SubmitButton title="Password Reset" className="mt-10 w-[100%]" />
               <div className="text-[14px] md:text-[16px] text-center mt-[20px] flex justify-center gap-2">
                 Don't have an account yet?
-                <Link to="/register" className="text-[#ffe6a6]">
+                <Link to="/register" className="text-[#b99dfa]">
                   Register instead
                 </Link>
               </div>

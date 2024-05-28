@@ -13,7 +13,7 @@ export const validateLogin = () => {
 };
 
 export const validateSignup = () => {
-  const phoneRegExp = /^[\+][0-9]{7,15}$/;
+  const phoneRegExp = /^[0-9]{6,15}$/;
   const validationSchema = yup.object({
     name: yup.string().trim().required('Name is missing'),
     email: yup.string().email('Invalid email').required('Email is missing'),

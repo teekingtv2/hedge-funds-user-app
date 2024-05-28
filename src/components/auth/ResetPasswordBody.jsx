@@ -64,7 +64,7 @@ const ResetPasswordBody = () => {
               <SubmitButton title="Reset Password" className="mt-10 w-[100%]" />
               <div className="text-[14px] md:text-[16px] text-center mt-[20px] flex justify-center gap-2">
                 Remembered password?
-                <Link to="/login" className="text-[#ffe6a6]">
+                <Link to="/login" className="text-[#b99dfa]">
                   Login instead
                 </Link>
               </div>

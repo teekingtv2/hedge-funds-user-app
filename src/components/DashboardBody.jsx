@@ -1,5 +1,6 @@
 import React from 'react';
 import { dateFormatter, formatter, successNotification } from '../utils/helpers';
+import { CryptoCurrencyMarket } from 'react-ts-tradingview-widgets';
 
 const DashboardBody = ({ userData, transData, walletData }) => {
   const copyErc20Text = () => {
@@ -36,7 +37,7 @@ const DashboardBody = ({ userData, transData, walletData }) => {
           <div className="">
             <div className="dashCardTitle">{formatter.format(userData.deposite_balance)}</div>
             <div className="text-[14px] md:text-[15px]">Deposit Balance</div>
-            <div className="text-[11px] text-[#FFE6A6]">Amount Deposited</div>
+            <div className="text-[11px] text-[#b99dfa]">Amount Deposited</div>
           </div>
         </div>
         <div className="dashCard">
@@ -48,7 +49,7 @@ const DashboardBody = ({ userData, transData, walletData }) => {
           <div className="">
             <div className="dashCardTitle">{formatter.format(userData.profit_balance)}</div>
             <div className="text-[14px] md:text-[15px]">Trading Balance</div>
-            <div className="text-[11px] text-[#FFE6A6]">Total Profit Made</div>
+            <div className="text-[11px] text-[#b99dfa]">Total Profit Made</div>
           </div>
         </div>
         <div className="dashCard">
@@ -60,22 +61,33 @@ const DashboardBody = ({ userData, transData, walletData }) => {
           <div className="">
             <div className="dashCardTitle">{formatter.format(userData.total_balance)}</div>
             <div className="text-[14px] md:text-[15px]">Total Balance</div>
-            <div className="text-[11px] text-[#FFE6A6]">Withdrawable Balance</div>
+            <div className="text-[11px] text-[#b99dfa]">Withdrawable Balance</div>
           </div>
         </div>
       </div>
 
       <div className="mb-10 mt-5 p-2 bg-[#151515c2] w-[100%] text-center">
         <div className="p-2 mb-2 w-[100%] text-[14px]">
-          <div className="text-red-500">Only send ERC20 tokens (ETH) to this address</div>
-          <div className="col-span-1" onClick={copyErc20Text}>
-            ERC20 Wallet - {walletData.erc20.substr(0, 8)}...(tap to copy)
+          <div className="text-red-500 mb-3">
+            Kindly connect wallet to begin trading. Or manually make deposit to the address below.
           </div>
-          <div className="text-red-500 mt-4">Only send Bitcoin to this address</div>
-          <div className="col-span-1" onClick={copyBitcoinText}>
-            Bitcoin Wallet - {walletData.bitcoin.substr(0, 8)}...(tap to copy)
+          <div className="w-[100%] md:w-[50%] mx-auto flex justify-between mb-2 text-[15px]">
+            <div className="font-[500]">ERC20 adrress</div>
+            <div className="" onClick={copyErc20Text}>
+              {walletData.erc20.substr(0, 8)}...(tap to copy)
+            </div>
+          </div>
+          <div className="w-[100%] md:w-[50%] mx-auto flex justify-between mb-2 text-[15px]">
+            <div className="font-[500]">Bitcoin adrress</div>
+            <div className="" onClick={copyBitcoinText}>
+              {walletData.bitcoin.substr(0, 8)}...(tap to copy)
+            </div>
           </div>
         </div>
+      </div>
+
+      <div className="mb-5">
+        <CryptoCurrencyMarket colorTheme="dark" width="100%" height={400}></CryptoCurrencyMarket>
       </div>
 
       <div className="">
