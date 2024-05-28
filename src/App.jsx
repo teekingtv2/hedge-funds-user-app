@@ -27,7 +27,6 @@ function App() {
             pauseOnFocusLoss
             draggable
             pauseOnHover
-            theme="colored"
           />
           <Routes>
             <Route path="/" element={<DashboardPage />} />

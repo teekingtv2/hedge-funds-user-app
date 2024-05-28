@@ -20,7 +20,7 @@ const NavBar = ({ name }) => {
     setNav(!nav);
   };
   const handleConnectWalletToggle = () => {
-    setShowConnectWallet(!showConnectWallet);
+    // setShowConnectWallet(!showConnectWallet);
   };
 
   const onUpdateActiveLink = (value) => {
