@@ -61,7 +61,6 @@ const DashboardBody = ({ userData, transData, walletData }) => {
           <div className="">
             <div className="dashCardTitle">{formatter.format(userData.total_balance)}</div>
             <div className="text-[14px] md:text-[15px]">Total Balance</div>
-            <div className="text-[11px] text-[#b99dfa]">Withdrawable Balance</div>
           </div>
         </div>
       </div>

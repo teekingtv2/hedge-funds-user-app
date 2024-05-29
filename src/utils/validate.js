@@ -92,3 +92,17 @@ export const validateOtp = () => {
   });
   return validationSchema;
 };
+
+export const validateWithdrawal = () => {
+  const validationSchema = yup.object({
+    balance: yup.number().required(),
+    amount: yup
+      .mixed()
+      .test('isLarger', 'Amount must be lower than your balance', (value, testContext) => {
+        if (testContext.parent.balance <= value) return false;
+        return true;
+      })
+      .required('How much are you withdrawing?'),
+  });
+  return validationSchema;
+};

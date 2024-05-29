@@ -11,6 +11,7 @@ import TransactionsPage from './pages/transactions/index.jsx';
 import VerifyEmailPage from './pages/auth/verify-email/index.jsx';
 import ResetPasswordPage from './pages/auth/reset-password/index.jsx';
 import RegisterPage from './pages/auth/register/index.jsx';
+import WithdrawPage from './pages/withdraw/index.jsx.jsx';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<DashboardPage />} />
             <Route path="/transactions" element={<TransactionsPage />} />
+            <Route path="/withdraw" element={<WithdrawPage />} />
             <Route path="/edit-profile" element={<EditProfilePage />} />
             <Route path="/edit-password" element={<EditPasswordPage />} />
 

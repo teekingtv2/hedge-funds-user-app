@@ -61,3 +61,11 @@ export const otpValues = () => {
   };
   return initialValues;
 };
+
+export const withdrawalValues = (balance) => {
+  const initialValues = {
+    balance: balance,
+    amount: '',
+  };
+  return initialValues;
+};

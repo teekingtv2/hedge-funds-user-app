@@ -51,8 +51,13 @@ const RegisterBody = () => {
     <>
       <div className="w-[100%] mx-auto">
         <div className="p-2 bg-[#111111da] overflow-x-scroll pt-[50px] pb-[50px] register-box">
-          <div className="text-[24px] text-center mb-5 font-bold text-[#fff]">
-            Sign up to get started
+          <div className="px-3">
+            <div className="text-[24px] text-center mb-1 font-bold text-[#fff]">
+              Sign up to get started
+            </div>
+            <div className="text-[13px] mb-5 text-[#ffffffc9]">
+              Copy and paste your wallet address correct from your trust/METAMASK wallet
+            </div>
           </div>
           <div className="p-2 w-[100%]">
             <CustomFormik

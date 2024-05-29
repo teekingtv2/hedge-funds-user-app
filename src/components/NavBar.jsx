@@ -3,7 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaWallet, FaSignOutAlt } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { errorNotification, successNotification } from '../utils/helpers';
+import { errorNotification, infoNotification, successNotification } from '../utils/helpers';
 import useFetchCredential from '../api/useFetchCredential';
 axios.defaults.withCredentials = true;
 
@@ -21,6 +21,7 @@ const NavBar = ({ name }) => {
   };
   const handleConnectWalletToggle = () => {
     // setShowConnectWallet(!showConnectWallet);
+    // infoNotification('Coming soon!');
   };
 
   const onUpdateActiveLink = (value) => {
@@ -66,7 +67,7 @@ const NavBar = ({ name }) => {
               </span>
             </div>
             <div
-              onClick={handleConnectWalletToggle}
+              onMouseEnter={handleConnectWalletToggle}
               className="border border-dotted rounded-[20px] py-2 px-2 md:py-4 md:px-6 text-sm font-bold hover:border-b flex justify-center items-center"
             >
               <span className="mr-2 text-[16px] md:text-[17px]">Connect Wallet</span>
@@ -130,6 +131,13 @@ const NavBar = ({ name }) => {
                   className={activeLink === 'transactions' ? 'active' : 'text-gray-200'}
                 >
                   <li className="py-4 text-sm">Transactions</li>
+                </Link>
+                <Link
+                  onClick={() => setNav(false)}
+                  to="/withdraw"
+                  className={activeLink === '' ? 'active' : 'text-gray-200'}
+                >
+                  <li className="py-4 text-sm">Withdraw</li>
                 </Link>
                 <div onClick={handleLogout} className="flex justify-start items-center gap-3">
                   <li className="py-4 text-sm">Logout</li>
