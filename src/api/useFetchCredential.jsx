@@ -16,7 +16,7 @@ const useFetchCredential = (url) => {
       .then((response) => {
         console.log(response);
         if (response.status === 209) {
-          // window.location.replace(`/login`);
+          window.location.replace(`/login`);
         }
         setData(response.data);
         setLoading(false);
@@ -27,11 +27,11 @@ const useFetchCredential = (url) => {
           setLoading(false);
           setError(err?.response?.data?.error);
           errorNotification(err?.response?.data?.error);
-          // if (err?.response.status === 209) {
-          //   setTimeout(() => {
-          //     window.location.replace(`/login`);
-          //   }, 2000);
-          // }
+          if (err?.response.status === 209) {
+            setTimeout(() => {
+              window.location.replace(`/login`);
+            }, 2000);
+          }
         }
       });
     // return () => abortController.abort();
