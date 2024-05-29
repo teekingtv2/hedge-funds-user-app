@@ -7,8 +7,7 @@ import { errorNotification, infoNotification, successNotification } from '../uti
 import useFetchCredential from '../api/useFetchCredential';
 axios.defaults.withCredentials = true;
 
-const NavBar = ({ name }) => {
-  const history = useNavigate();
+const NavBar = () => {
   const [nav, setNav] = useState(false);
   const [showConnectWallet, setShowConnectWallet] = useState(false);
   const [linkColor, setLinkColor] = useState('#1f2937');
@@ -36,7 +35,7 @@ const NavBar = ({ name }) => {
       if (response.status === 200) {
         const data = response.data;
         successNotification(data.message);
-        setTimeout(() => history('/login'), 2000);
+        setTimeout(() => window.location.replace('/login'), 1500);
       } else {
         errorNotification(response?.data?.error);
       }
