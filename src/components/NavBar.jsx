@@ -28,7 +28,9 @@ const NavBar = ({ name }) => {
     setActiveLink(value);
   };
   const handleLogout = async () => {
-    const response = await axios.post(`${import.meta.env.VITE_API_URL}/user-auth/logout`);
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/user-auth/logout`, null, {
+      withCredentials: true,
+    });
     console.log(response);
     try {
       if (response.status === 200) {
