@@ -9,6 +9,7 @@ const SubmitButton = ({ title, className }) => {
       onClick={handleSubmit}
       className={className}
       disabled={isSubmitting ? true : false}
+      style={{ background: isSubmitting ? '#333 !mportant' : '' }}
     >
       {title}
     </button>

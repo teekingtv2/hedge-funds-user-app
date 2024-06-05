@@ -99,7 +99,7 @@ const VerifyEmailBody = () => {
               <div className="font-bold text-[14.5px] md:text-[18px] grid grid-cols-1 gap-8 md:grid-cols-1 w-[100%] p-2 mb-2">
                 <InputField name="otp" placeholder="Enter OTP" />
               </div>
-              <SubmitButton title="Password Reset" className="mt-10 w-[100%]" />
+              <SubmitButton title="Verify Email" className="mt-10 w-[100%]" />
               <div className="text-[14px] md:text-[16px] text-center mt-[20px] flex justify-center gap-2">
                 Didn't recive the OTP?
                 <div onClick={resendOTP} className="text-[#b99dfa]">

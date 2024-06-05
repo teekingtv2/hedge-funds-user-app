@@ -68,10 +68,10 @@ const RegisterBody = () => {
               <div className="font-bold text-[14.5px] md:text-[18px] uppercase grid grid-cols-1 gap-8 md:grid-cols-2 w-[100%] p-2 mb-2">
                 <InputField name="name" placeholder="Your full name" />
                 <InputField name="email" placeholder="Your email address" />
-                <InputField name="wallet" placeholder="Wallet address" />
                 <SelectNetworkField name="network" />
+                <InputField name="wallet" placeholder="Wallet address" />
                 <SelectCountryField name="country" />
-                <InputField name="phone" placeholder="Phone number (with country code)" />
+                <InputField name="phone" placeholder="Phone number" />
                 <InputField name="password" placeholder="Set password" type="password" />
                 <InputField name="confirmPassword" placeholder="Confirm password" type="password" />
               </div>
